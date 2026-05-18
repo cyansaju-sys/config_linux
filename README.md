@@ -31,7 +31,7 @@ apt install fastfetch
 ```bash
 mkdir -p ~/.config/fastfetch
 # copiar el directorio fastfetch
-cp -r .config/fastfetch ~/.config/fastfetch
+cp -r .conf/fastfetch ~/.config/fastfetch
 
 ```
 
@@ -87,7 +87,7 @@ apt install kitty
 ```bash
 mkdir -p ~/.config/kitty
 # copiar el directorio kitty
-cp -r .config/kitty ~/.config/kitty
+cp -r .conf/kitty ~/.config/kitty
 ```
 
 ### Configuración principal (`kitty.conf`)
