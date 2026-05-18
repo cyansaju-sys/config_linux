@@ -4,7 +4,7 @@ personalizaciones de linux
 ---
 
 ## fastfetch
-[example](./exaple/fastfetch.png)
+![example](./exaple/fastfetch.png)
 Muestra información del sistema al abrir la terminal. Usa imagen personalizada (Miku) renderizada con el protocolo gráfico de Kitty.
 
 ### Dependencias
@@ -47,7 +47,7 @@ cp -r .config/fastfetch ~/.config/fastfetch
 ---
 
 ## kitty
-[example](./exaple/kitty.png)
+![example](./exaple/kitty.png)
 
 Terminal emulador con soporte de GPU, protocolo gráfico, pestañas y alta personalización.
 
