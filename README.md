@@ -8,8 +8,16 @@ Muestra información del sistema al abrir la terminal. Usa imagen personalizada 
 
 ### Dependencias
 
+##### Distribuciones basadas en Arch Linux
 ```bash
 pacman -S fastfetch
+```
+
+##### Distribuciones basadas en Debian
+
+```bash
+apt install fastfetch
+
 ```
 
 ### Instalación
@@ -52,11 +60,16 @@ Terminal emulador con soporte de GPU, protocolo gráfico, pestañas y alta perso
 
 ### Dependencias
 
+##### Distribuciones basadas en Arch Linux
 ```bash
 pacman -S kitty
+```
 
+##### Distribuciones basadas en Debian
+```bash
 apt install kitty
 ```
+
 
 > **Opcional:** instala una Nerd Font para ver los iconos correctamente (ej. JetBrains Mono Nerd Font).
 > ```bash
