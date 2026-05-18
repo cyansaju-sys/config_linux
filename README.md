@@ -1,7 +1,6 @@
 # Configuración de fastfetch y Kitty
 
-personalizaciones de linux
----
+personalización de la terminal
 
 ## fastfetch
 ![example](./exaple/fastfetch.png)
@@ -110,3 +109,45 @@ cp -r .config/kitty ~/.config/kitty
   kitten themes
   ```
   Esto sobreescribe `dark-theme.auto.conf` automáticamente.
+
+---
+
+## zsh
+![example](./exaple/zshconf.png)
+
+Configuración de `~/.zshrc` para ejecutar fastfetch **solo en la primera ventana de Kitty**. Las ventanas siguientes no lo muestran, y si se cierra la que lo ejecutó, la próxima ventana vuelve a mostrarlo.
+
+### Instalación
+
+```bash
+cp .zshrc ~/.zshrc
+```
+
+O agrega el bloque directamente al final de tu `~/.zshrc`:
+
+```zsh
+# Run fastfetch only in the first Kitty terminal; resets when that terminal closes
+if [[ -n "$KITTY_WINDOW_ID" ]]; then
+  _fastfetch_lock="/tmp/.fastfetch_shown_kitty"
+  if [[ -f "$_fastfetch_lock" ]]; then
+    _fastfetch_pid=$(<"$_fastfetch_lock")
+    kill -0 "$_fastfetch_pid" 2>/dev/null || rm -f "$_fastfetch_lock"
+    unset _fastfetch_pid
+  fi
+  if [[ ! -f "$_fastfetch_lock" ]]; then
+    echo "$$" > "$_fastfetch_lock"
+    fastfetch
+  fi
+  unset _fastfetch_lock
+fi
+```
+
+### Cómo funciona
+
+| Paso | Qué hace |
+|------|----------|
+| `$KITTY_WINDOW_ID` | Solo se activa en Kitty; VSCode, GNOME Terminal, etc. quedan excluidos. |
+| Lock file | Guarda el PID del shell que corrió fastfetch en `/tmp/.fastfetch_shown_kitty`. |
+| `kill -0 <pid>` | Verifica si ese shell sigue vivo sin matarlo. |
+| PID muerto | El lock se borra y la próxima terminal corre fastfetch. |
+| PID vivo | La terminal original sigue abierta; no se repite fastfetch. |
