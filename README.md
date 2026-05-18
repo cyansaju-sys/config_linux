@@ -2,6 +2,12 @@
 
 personalización de la terminal
 
+## Clone el repositorio
+
+```bash
+git clone https://github.com/cyansaju-sys/config_linux.git
+```
+
 ## fastfetch
 ![example](./exaple/fastfetch.png)
 Muestra información del sistema al abrir la terminal. Usa imagen personalizada (Miku) renderizada con el protocolo gráfico de Kitty.
@@ -112,16 +118,6 @@ cp -r .config/kitty ~/.config/kitty
 | `F11`                | Pantalla completa                            |
 | `Ctrl+Shift+A M/L`   | Subir / bajar opacidad (dynamic opacity)     |
 
-### Tema (`dark-theme.auto.conf`)
-
-**Atelier Heath Dark** — fondo oscuro con tonos magenta/rojo fríos.
-
-- Fondo: `#1b181b` · Texto: `#ab9bab`
-- Generado con `kitten themes`. Para cambiarlo ejecuta:
-  ```bash
-  kitten themes
-  ```
-  Esto sobreescribe `dark-theme.auto.conf` automáticamente.
 
 ---
 
