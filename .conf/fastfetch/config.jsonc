@@ -1,0 +1,47 @@
+{
+  "$schema": "https://raw.githubusercontent.com/fastfetch-cli/fastfetch/master/doc/json_schema.json",
+
+  "logo": {
+    "source": "~/.config/fastfetch/images/miku.png",
+    "type": "kitty",
+    "width": 32,
+    "height": 16
+  },
+
+  "display": {
+    "separator": "  ",
+    "color": {
+      "keys": "bright_cyan",
+      "title": "bright_cyan"
+    }
+  },
+
+  "modules": [
+    {
+      "type": "title",
+      "format": "󰣇 ──────────── {1} @ Arch ──────────── 󰣇",
+      "color": {
+        "user": "bright_cyan",
+        "at": "cyan",
+        "host": "bright_cyan"
+      }
+    },
+    // ── Sistema ──────────────────────────────
+    { "type": "kernel",   "key": "󰒓  Kernel"    },
+    { "type": "packages", "key": "󰏓  Packages"  },
+    // ── Escritorio ───────────────────────────
+    { "type": "wm",       "key": "󱂬  WM"        },
+    { "type": "icons",    "key": "󰀻  Icons"     },
+    { "type": "font",     "key": "󰝀  Font"      },
+    // ── Hardware ────────────────────────────
+    { "type": "cpu",    "key": "󰻠  CPU"    },
+    { "type": "gpu",    "key": "󰍛  GPU"    },
+    { "type": "memory", "key": "󰾆  Memory" },
+    { "type": "swap",   "key": "󰓡  Swap"   },
+    // ── Redes ────────────────────────
+    { "type": "localip",      "key": "󰤨  Network" },
+    { "type": "uptime",   "key": "󰅐  Uptime"    },
+    { "type": "break" },
+    "colors"
+  ]
+}
