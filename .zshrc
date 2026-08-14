@@ -1,5 +1,5 @@
-# Run fastfetch only in the first Kitty terminal; resets when that terminal closes
-if [[ -n "$KITTY_WINDOW_ID" ]]; then
+# Run fastfetch only in the first real Kitty terminal; resets when that terminal closes
+if [[ "$TERM" == "xterm-kitty" && -n "$KITTY_WINDOW_ID" ]]; then
   _fastfetch_lock="/tmp/.fastfetch_shown_kitty"
   if [[ -f "$_fastfetch_lock" ]]; then
     _fastfetch_pid=$(<"$_fastfetch_lock")
