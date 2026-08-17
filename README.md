@@ -2,10 +2,12 @@
 
 personalización de la terminal
 
-## Clone el repositorio
+## Instalación
+
+Clona el repositorio y ejecuta `install.sh`. El script copia `fastfetch` y `kitty` a `~/.config/`, haciendo backup de cualquier configuración existente antes de sobrescribirla.
 
 ```bash
-git clone https://github.com/cyansaju-sys/config_linux.git
+git clone https://github.com/cyansaju-sys/config_linux.git && cd config_linux && ./install.sh
 ```
 
 ## fastfetch
@@ -28,11 +30,12 @@ apt install fastfetch
 
 ### Instalación
 
+Incluida en `./install.sh` (ver [Instalación](#instalación)). Para instalarla manualmente:
+
 ```bash
 mkdir -p ~/.config/fastfetch
 # copiar el directorio fastfetch
 cp -r .conf/fastfetch ~/.config/fastfetch
-
 ```
 
 ### Módulos que muestra
@@ -83,6 +86,8 @@ apt install kitty
 > ```
 
 ### Instalación
+
+Incluida en `./install.sh` (ver [Instalación](#instalación)). Para instalarla manualmente:
 
 ```bash
 mkdir -p ~/.config/kitty

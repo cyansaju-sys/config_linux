@@ -2,9 +2,9 @@
   "$schema": "https://raw.githubusercontent.com/fastfetch-cli/fastfetch/master/doc/json_schema.json",
 
   "logo": {
-    "source": "~/.config/fastfetch/images/miku.png",
+    "source": "~/.config/fastfetch/images/icon.jpeg",
     "type": "kitty",
-    "width": 32,
+    "width": 25,
     "height": 16
   },
 
@@ -19,7 +19,7 @@
   "modules": [
     {
       "type": "title",
-      "format": "󰣇 ──────────── {1} @ Arch ──────────── 󰣇",
+      "format": "──────────── {1} @ {2} ────────────",
       "color": {
         "user": "bright_cyan",
         "at": "cyan",
