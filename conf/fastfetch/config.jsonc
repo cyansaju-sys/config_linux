@@ -2,12 +2,11 @@
   "$schema": "https://raw.githubusercontent.com/fastfetch-cli/fastfetch/master/doc/json_schema.json",
 
   "logo": {
-    "source": "~/.config/fastfetch/images/icon.jpeg",
+    "source": "~/.config/fastfetch/images/miku.jpeg",
     "type": "kitty",
-    "width": 25,
-    "height": 16
+    "width": 23,
+    "height": 15
   },
-
   "display": {
     "separator": "  ",
     "color": {
@@ -15,7 +14,6 @@
       "title": "bright_cyan"
     }
   },
-
   "modules": [
     {
       "type": "title",

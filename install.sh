@@ -13,6 +13,6 @@ for app in fastfetch kitty; do
     echo "Backing up existing $target -> $backup"
     mv "$target" "$backup"
   fi
-  cp -r "$SCRIPT_DIR/.conf/$app" "$target"
+  cp -r "$SCRIPT_DIR/conf/$app" "$target"
   echo "Instalado $app en $target"
 done
